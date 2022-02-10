@@ -1,0 +1,1 @@
+/omd/sites/cmk/bin/lq "GET services\nFilter: last_check >= $(($(date +%s)-60))\nColumns: last_check host_name description state plugin_output" | /usr/bin/perl /omd/sites/cmk/csv_checkmk.pl >> /omd/sites/cmk/metrics/probando.csv 
